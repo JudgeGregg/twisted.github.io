@@ -1,0 +1,332 @@
+<!doctype html>
+<html class="no-js">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" />
+
+    <meta name="generator" content="sphinx-4.4.0, furo 2022.02.14.1"/>
+        <title>Contributing To Twisted - Twisted documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=a8f031f701c6af50c9919b48f173a5785af06fac" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=25ceb02ed1c46dc30f2321ff83e92799f69dfdb9" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  body[data-theme="dark"] {
+    --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    body:not([data-theme="light"]) {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+  }
+</style></head>
+  <body>
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../index.html"><div class="brand">Twisted  documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
+  
+  
+  <span class="sidebar-brand-text">Twisted  documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
+  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="contributing-to-twisted">
+<h1><a class="toc-backref" href="#id2">Contributing To Twisted</a><a class="headerlink" href="#contributing-to-twisted" title="Permalink to this headline">#</a></h1>
+<div class="contents topic" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#contributing-to-twisted" id="id2">Contributing To Twisted</a></p>
+<ul>
+<li><p><a class="reference internal" href="#code-contributions" id="id3">Code Contributions</a></p>
+<ul>
+<li><p><a class="reference internal" href="#overview" id="id4">Overview</a></p></li>
+<li><p><a class="reference internal" href="#prepare" id="id5">Prepare</a></p></li>
+<li><p><a class="reference internal" href="#explore-and-contribute" id="id6">Explore and Contribute</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#other-ways-to-contribute" id="id7">Other Ways to Contribute</a></p></li>
+<li><p><a class="reference internal" href="#wiki-portals" id="id8">Wiki Portals</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>There are many ways individuals and organizations can make contributions to Twisted.</p>
+<p>Many open source projects are perpetually crunched for volunteer labor. Twisted is no different in this respect — we could always use more help from the community.  However, we are lucky to have something that most projects don’t: the ability to convert dollars directly into maintenance that benefits the project.</p>
+<p>When you contribute money to the Twisted project, you are directly contributing to get bugs fixed, features implemented, and tickets reviewed.
+Donations are <a class="reference external" href="/content/pages/Twisted/TwistedSoftwareFoundation.html#background">tax-deductible</a> and can be made via <a class="reference external" href="http://twistedmatrix.com/">Google Checkout or Paypal</a> or directly to the <a class="reference external" href="/content/pages/Twisted/TwistedSoftwareFoundation.html">Twisted Software Foundation</a>.</p>
+<section id="code-contributions">
+<h2><a class="toc-backref" href="#id3">Code Contributions</a><a class="headerlink" href="#code-contributions" title="Permalink to this headline">#</a></h2>
+<section id="overview">
+<h3><a class="toc-backref" href="#id4">Overview</a><a class="headerlink" href="#overview" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="/content/pages/Twisted/TwistedDevelopment.html#submitting-a-patch">Submitting a Patch</a>, a simplified overview</p></li>
+<li><p><a class="reference external" href="/content/pages/Twisted/TwistedDevelopment.html">Detailed Contribution Requirements</a>, with that and more</p></li>
+<li><p><a class="reference external" href="/content/pages/ReviewProcess.html">Review Process</a>, how contributed code is quality checked and reviewed</p></li>
+<li><p><a class="reference external" href="/content/pages/CommitterCheckList.html">Checklist for Twisted committers</a>, things that developers with commit access should know</p></li>
+</ul>
+</section>
+<section id="prepare">
+<h3><a class="toc-backref" href="#id5">Prepare</a><a class="headerlink" href="#prepare" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>Get a GitHub account and then come back and <a class="reference external" href="/fixme/github/login">Login using GitHub</a> on this site</p></li>
+<li><p>Intimately familiarize yourself with <a class="reference external" href="/content/pages/UltimateQualityDevelopmentSystem.html">The Ultimate Quality Development System</a></p></li>
+<li><p>Understand the <a class="reference external" href="/index.html">Developer docs</a> (how-tos, core docs, examples, API reference)</p></li>
+<li><p>Twisted has a rigorous policy standards for code, documentation, and testing:</p>
+<ul>
+<li><p><a class="reference external" href="http://twistedmatrix.com/documents/current/core/development/policy/coding-standard.html">Coding standard</a></p></li>
+<li><p><a class="reference external" href="http://twistedmatrix.com/documents/current/core/development/policy/writing-standard.html">Writing Style guide</a></p></li>
+<li><p><a class="reference external" href="http://twistedmatrix.com/documents/current/core/development/policy/test-standard.html">Testing standard</a></p></li>
+<li><p><a class="reference external" href="https://github.com/twisted/twisted/blob/trunk/docs/core/development/policy/code-dev.html">Git Access</a></p></li>
+</ul>
+</li>
+<li><p>Understand the <a class="reference external" href="/content/pages/ReviewProcess.html">Review Process</a> code review process</p></li>
+<li><p>Multiple CI services are used to automate the build process across platforms and test for breakage. Watch their feedback on each pull request page.</p></li>
+</ul>
+</section>
+<section id="explore-and-contribute">
+<h3><a class="toc-backref" href="#id6">Explore and Contribute</a><a class="headerlink" href="#explore-and-contribute" title="Permalink to this headline">#</a></h3>
+<ul class="simple">
+<li><p>Examine some of the <a class="reference external" href="https://github.com/twisted/twisted/repository/">sources</a></p></li>
+<li><p>Take a look at the <a class="reference external" href="/fixme/report/">open tickets</a> open tickets</p></li>
+<li><p>Learn the <a class="reference external" href="/content/pages/BugKeywords.html">bug keywords</a></p>
+<ul>
+<li><p><a class="reference external" href="/fixme/query?status=new&amp;status=assigned&amp;status=reopened&amp;keywords=%7Eeasy&amp;order=priority">‘Easy’ keyword tickets</a> are low-hanging fruit and good to get your feet wet</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="/content/pages/Twisted/TwistedDevelopment.html#submitting-a-patch">Submit a Patch</a></p></li>
+<li><p>Learn how to apply for commit privileges with the <a class="reference external" href="/content/pages/ContributorAdvancementPath.html">Contributor Advancement Path</a></p></li>
+</ul>
+</section>
+</section>
+<section id="other-ways-to-contribute">
+<h2><a class="toc-backref" href="#id7">Other Ways to Contribute</a><a class="headerlink" href="#other-ways-to-contribute" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="/content/pages/ReviewingDocumentation.html">Review and add documentation</a></p></li>
+<li><p><a class="reference external" href="/content/pages/ReviewProcess.html">Code Reviews</a></p></li>
+<li><p>Submit bug reports (you must first be <a class="reference external" href="/fixme/register/">registered</a>)</p></li>
+<li><p>Provide technical support (answer questions on <a class="reference external" href="/content/pages/Twisted/TwistedCommunity.html">IRC and the mail lists</a>)</p></li>
+<li><p>Sign up for a <a class="reference external" href="/content/pages/ProjectJobs.html">project job</a>. Help us maintain our build CI, speed center, Trac instance, and more.</p></li>
+</ul>
+</section>
+<section id="wiki-portals">
+<h2><a class="toc-backref" href="#id8">Wiki Portals</a><a class="headerlink" href="#wiki-portals" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="/content/pages/Infrastructure.html">Infrastructure</a></p></li>
+<li><p><a class="reference external" href="/content/pages/ContinuousIntegration.html">ContinuousIntegration</a></p></li>
+<li><p><a class="reference external" href="/content/pages/Users/index.html">users</a></p></li>
+<li><p><a class="reference external" href="/content/pages/DocumentationAnalysis.html">DocumentationAnalysis</a></p></li>
+</ul>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2022, TDB
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Contributing To Twisted</a><ul>
+<li><a class="reference internal" href="#code-contributions">Code Contributions</a><ul>
+<li><a class="reference internal" href="#overview">Overview</a></li>
+<li><a class="reference internal" href="#prepare">Prepare</a></li>
+<li><a class="reference internal" href="#explore-and-contribute">Explore and Contribute</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#other-ways-to-contribute">Other Ways to Contribute</a></li>
+<li><a class="reference internal" href="#wiki-portals">Wiki Portals</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/scripts/furo.js"></script>
+    </body>
+</html>

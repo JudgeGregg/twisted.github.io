@@ -1,0 +1,402 @@
+<!doctype html>
+<html class="no-js">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" />
+
+    <meta name="generator" content="sphinx-4.4.0, furo 2022.02.14.1"/>
+        <title>Ultimate Quality Development System (UQDS) - Twisted documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=a8f031f701c6af50c9919b48f173a5785af06fac" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=25ceb02ed1c46dc30f2321ff83e92799f69dfdb9" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  body[data-theme="dark"] {
+    --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    body:not([data-theme="light"]) {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+  }
+</style></head>
+  <body>
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../index.html"><div class="brand">Twisted  documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
+  
+  
+  <span class="sidebar-brand-text">Twisted  documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
+  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="ultimate-quality-development-system-uqds">
+<h1>Ultimate Quality Development System (UQDS)<a class="headerlink" href="#ultimate-quality-development-system-uqds" title="Permalink to this headline">#</a></h1>
+<p>Divmod has been developing software for several years, and over the course of that time, we have developed a methodology, which involves a ticket discipline and a suggested use for a version control system.  It is extremely lightweight and “agile”, and can be combined as a component of any other methodology which breaks down work into individual tasks.</p>
+<p>The briefest summary of the requirements for UQDS is that every task has 3 absolutely required steps.</p>
+<ul class="simple">
+<li><p>A task is created in an issue tracker and assigned to a worker.</p></li>
+<li><p>The worker does work, and creates a change-set to be applied to the mainline revision control system.  (This can be represented as either a branch or a patch file.)</p></li>
+<li><p>A reviewer reviews the completed work, and provides feedback: at least one good thing about the work, at least one area that needs improvement,  and a judgement as to whether the good qualities ultimately outweigh the bad, i.e. whether the branch should be merged.</p></li>
+</ul>
+<p>The principles involved are:</p>
+<ul class="simple">
+<li><p>Most importantly, <strong>all</strong> work on a project must be reviewed by at least one person.  In conjunction with XP’s PairProgramming, this provides a minimum of 3 involved parties to every change.  Especially on small teams, this eliminates the possibility of finger-pointing, and increases the whole team’s awareness of the project in general.  Also, it addresses an area of code-review that PairProgramming does not: i.e. a decision might make sense at the time in the microcosm of some problem being solved, but be hard to explain or justify in the context of the larger project.  This provides an after-the-fact opportunity to verify that public methods are documented, debug prints are removed, and comments actually make sense to someone who wasn’t present when the code is being written.</p></li>
+<li><p><strong>All</strong> work on a project must be represented as changes to a version control system.  This most popularly applies to code, but in an ideal application of this methodology, designs, documentation and even plans could be added to the repository.  We are currently not quite so strict.</p></li>
+<li><p><strong>All</strong> work on a project must be represented by tickets in a ticket tracker.  If it’s not in the tracker, you shouldn’t be working on it.  This provides a way to manage distractions and continuously re-focus on what’s really important.</p></li>
+<li><p><strong>All</strong> development is done on branches - no development is done on the <code class="docutils literal notranslate"><span class="pre">trunk</span></code>. The <code class="docutils literal notranslate"><span class="pre">trunk</span></code> can be used to see branch differences, run test suites, build distributions, etc., but is not used for development. This may seem odd, but there are numerous reasons why it is a good idea (see below).</p></li>
+</ul>
+<p>The lifetime of a task in UQDS in practice (using <a class="reference external" href="https://git-scm.com/">Git</a> and <a class="reference external" href="https://trac.edgewall.org/">Trac</a>) looks something like this, with a developer <code class="docutils literal notranslate"><span class="pre">dev</span></code> and a reviewer <code class="docutils literal notranslate"><span class="pre">rev</span></code>.</p>
+<ul class="simple">
+<li><p>A ticket is created in the issue tracker.</p></li>
+<li><p>For features, a specification is attached to the ticket.  For defects, reproduction instructions.</p></li>
+<li><p>The developer who is assigned the task “accepts” the task, by changing its state to “accepted”.</p></li>
+<li><p>A branch is created in Git.  The branch is named with the convention &lt;descriptive word&gt;-&lt;issue number&gt;[-&lt;branch number&gt;].  (For smaller patches, or work done by non-committer developers, this and the next step can be omitted.  The developer can attach a patch to the ticket instead of creating a branch.)</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">dev@strange$ </span>git checkout -b <span class="m">123</span>-sprocket-fire trunk
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Development occurs to implement the feature or resolve the defect in the branch.</p></li>
+<li><p>When the code is deemed ready by the developer, the developer checks in their changes <strong>on the branch</strong> (not the trunk).</p></li>
+<li><p>The branch is then assigned to another developer for review. The ticket should be given the keyword “review”, assigned to the reviewer and the priority set to “highest”.</p></li>
+<li><p>The reviewer switches to the branch, then merges it locally, to review it in the context of how it will change trunk.</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">rev@charm$ </span>git checkout trunk
+<span class="gp">rev@charm$ </span>git pull
+<span class="gp">rev@charm$ </span>git merge --no-ff --no-commit <span class="m">123</span>-sprocket-fire
+<span class="gp">rev@charm$ </span>git diff --staged
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>(If the patch does not merge cleanly, the reviewer may reassign to the developer to merge/rebase before reviewing again.  Branches and patches must always be sufficiently recent that they will apply cleanly to trunk in order to be considered for review).</p></li>
+<li><p>The reviewer runs all automated tests.</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">rev@charm$ </span>trial twisted
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>The reviewer verifies that the code makes sense, has unit tests, has documentation, updates any existing documentation that is affected, and actually resolves the issue in question.</p></li>
+<li><p>If any more work is required, the reviewer reassigns to the developer explaining what else needs to be done in a ticket comment.  The reviewer can use <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">merge</span> <span class="pre">--abort</span></code> to back out of the merge if the branch changes are not acceptable. When this process has been repeated enough times that all the tests pass and the reviewer is satisfied, they re-assign to the developer for merging, and the developer merges.</p></li>
+</ul>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">dev@strange$ </span>git commit -m <span class="s2">"</span>
+<span class="go">A brief description of the sprocket feature.</span>
+
+<span class="go">Author: dev</span>
+
+<span class="go">Reviewer: rev</span>
+
+<span class="go">Fixes #123</span>
+
+<span class="go">A detailed description of the sprocket feature.</span>
+<span class="go">"</span>
+
+<span class="gp">dev@strange$ </span>git branch -d <span class="m">123</span>-sprocket-fire
+<span class="gp">dev@strange$ </span>git push -d origin <span class="m">123</span>-sprocket-fire
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>the “fixes” note in the commit message automatically resolves the ticket with a status of “fixed”.  Voila!  Our feature is implemented and ready in trunk.</p></li>
+</ul>
+<p>Branch lifetimes should be short.  If trunk moves very far from the branch, the branch should be rebased or merged to pick up bug fixes and feature enhancements which might be useful.  Doing this also makes the final merge easier, by keeping conflicts small and bringing them to the developer’s attention before they become unmanageable.</p>
+<section id="why-branches">
+<h2>Why Branches ?<a class="headerlink" href="#why-branches" title="Permalink to this headline">#</a></h2>
+<p>The most recent version of source code in the repository should always be working.  That makes it a lot easier to deploy fixes and tweaks quickly.  However, sometimes you need to check in code to test it on a different machine, or show it to a different developer.  A version control system is useful in many ways, and if you only have one branch, these purposes conflict.</p>
+<p>Here are some of its features.</p>
+<section id="keep-trunk-working">
+<h3>Keep <code class="docutils literal notranslate"><span class="pre">trunk</span></code> Working<a class="headerlink" href="#keep-trunk-working" title="Permalink to this headline">#</a></h3>
+<p>The most recent revision of a piece of software, that is, <code class="docutils literal notranslate"><span class="pre">trunk@HEAD</span></code> should always work.  Any new developer should be able to check out the most recent version and immediately start working, without worrying that the build is broken this week.</p>
+<p>With branch-based development, features are only merged to trunk after they have been tested and reviewed by at least one other developer.</p>
+</section>
+<section id="switch-developers-mid-feature">
+<h3>Switch Developers Mid-Feature<a class="headerlink" href="#switch-developers-mid-feature" title="Permalink to this headline">#</a></h3>
+<p>If a developer gets stuck because it turns out that part of a feature is outside their expertise, they can easily put code that they know is broken into a branch, then indicate that branch to another developer and reassign the ticket, without breaking trunk.</p>
+</section>
+<section id="provide-useful-progress-information-to-management">
+<h3>Provide Useful Progress Information to Management<a class="headerlink" href="#provide-useful-progress-information-to-management" title="Permalink to this headline">#</a></h3>
+<p>Branches directly correspond to user-facing tasks.  A quick look at the list of branches should indicate to managers what is actually going on.  If there are a lot of branches (more than twice the number of developers, let’s say), that means that the team’s efforts are getting diffuse and they need to focus more and get branches merged.  If branches are being turned over quickly, it means that tasks are being completed quickly.</p>
+</section>
+<section id="mechanism-for-code-review">
+<h3>Mechanism for Code Review<a class="headerlink" href="#mechanism-for-code-review" title="Permalink to this headline">#</a></h3>
+<p>Usually <a class="reference external" href="/content/pages/CodeReview.html">CodeReview</a> is done by module, and only after the fact.  While this practice is useful, it only raises problems that already exist, it doesn’t prevent them.</p>
+<p>By reviewing each branch as a change, rather than a module, problems are spotted earlier on, and developers can work on any modules that are necessary for a particular task, with no worries that the maintainer won’t notice - on a larger team, any module maintainers should be asked for review.</p>
+<p>This is also a low-friction review process.  Rather than submitting a branch for review and discussing it interactively, a developer may accept a ticket, start a branch, commit a few times, finish, put the ticket into review, move on to an unrelated branch, repeat, put that branch into review, then check their assigned tickets at the end of the day and merge any branches which have been accepted before finishing for the day.</p>
+</section>
+<section id="generate-a-meaningful-changelog">
+<h3>Generate a Meaningful Changelog<a class="headerlink" href="#generate-a-meaningful-changelog" title="Permalink to this headline">#</a></h3>
+<p>Often, source control logs are riddled with nonsensical, tiny changes.  “twiddled whitespace”, “added a few docstrings”, etc.  Because it’s good to commit frequently to avoid losing too much work or generating monolithic changes, this is hard to avoid.  Commit messages generate a bottleneck to getting work into the repository, which is bad.</p>
+<p>If every branch has a clear purpose, then only ‘’merges’’ need have useful, descriptive commit messages, and since no code is changing when a developer is doing a merge to trunk, they can take all the time they need to come up with a good message.  This means that the changelog generated directly from a revision log of trunk (as opposed to the whole repository) is likely to be useful as a changelog.</p>
+<p>Tangentially related, commit messages for merges should include at least three pieces of information:</p>
+<ul class="simple">
+<li><p>The author of the branch.</p></li>
+<li><p>The reviewer of the branch.</p></li>
+<li><p>The tickets which the branch resolves or relates to.</p></li>
+</ul>
+</section>
+<section id="revert-useful-units">
+<h3>Revert Useful Units<a class="headerlink" href="#revert-useful-units" title="Permalink to this headline">#</a></h3>
+<p>If something ‘’does’’ break trunk, you can revert it with one command, rather than sifting through piles of related commit messages and trying to assemble a useful revert.  It’s “revision 1234”, not “revision 1232, 1237, 1239, 1246, and I think maybe 1255 too, you should run the tests both ways”.</p>
+</section>
+<section id="merge-when-you-re-merging-not-when-you-re-hacking">
+<h3>Merge When You’re Merging, Not When You’re Hacking<a class="headerlink" href="#merge-when-you-re-merging-not-when-you-re-hacking" title="Permalink to this headline">#</a></h3>
+<p>If you are working directly in trunk, any update may cause conflicts which you have to immediately resolve before you can continue working.  With branches, a smaller number of developers can work on a branch, knowing that their changes won’t conflict, and update regularly.</p>
+<p>That means you are never interrupted with an unpleasant required merge.  Your code is always in the repository ‘’before’’ you worry about merging it with other people’s changes, so there is no concern that although your code was working before you were ready to commit, the merge went badly and you never committed in a working state.</p>
+</section>
+<section id="develop-on-a-preferred-platform-test-on-another-disturbing-no-one">
+<h3>Develop on a Preferred Platform, Test on Another, Disturbing No-one<a class="headerlink" href="#develop-on-a-preferred-platform-test-on-another-disturbing-no-one" title="Permalink to this headline">#</a></h3>
+<p>If a developer prefers to code in a Unix environment but needs to add a feature for Windows, they can create a branch, happily work on it under Unix, commit the changes (to the branch), go to a Windows machine and update the branch, test it, repeat etc. This allows one developer to work in private on several machines, using the revision control system in a disciplined and effective way that precludes accidents passing patches or updates between machines, and which has no impact on other developers.</p>
+</section>
+<section id="cover-yourself">
+<h3>Cover yourself<a class="headerlink" href="#cover-yourself" title="Permalink to this headline">#</a></h3>
+<p>If adding a feature or fixing a bug takes a significant amount of time, at some point you’re going to want to make sure your changes so far
+are backed up. If you’re working on the trunk you clearly can’t check them in. So you’re forced to take a more manual and probably
+more error-prone approach to make a backup of your local changes. If instead you’re working in a branch, you can just check in your
+changes so far - without disturbing the trunk. Of course if there are multiple developers working on one branch, you’ll need to do something
+else (like work on a branch of a branch). In the simple situation where you’re alone on a branch, you can easily save your progress
+so far back to the repository and have it be the backup of your work to date on the branch.</p>
+</section>
+<section id="some-thoughts-on-things-i-don-t-know-anything-about">
+<h3>Some Thoughts on Things I Don’t Know Anything About<a class="headerlink" href="#some-thoughts-on-things-i-don-t-know-anything-about" title="Permalink to this headline">#</a></h3>
+<p>While this process works very well for us on Python code, more heavyweight development environments might find it even more valuable.  For example, if it takes an hour-long build process and 20 minutes of testing to determine whether trunk is in a good state, branch-based development could be even more valuable.</p>
+<p>Even if you already have awesome automated tests, branches can speed things up immensely.  Let’s say Foo Co. has 30 developers and an hour long build and 20 minutes of unit tests.  Jethro checks in some broken core header file to trunk and goes to lunch.  The automated tests start building and running.  Alice, preparing to commit, updates.  She receives Jethro’s broken changes.  Alice, being a better developer than Jethro, runs the tests.  She waits 20 minutes.  The build is broken!  She can’t commit, since she doesn’t want to break trunk.  (All this while, precious hours of work are sitting on Alice’s disk, not backed up in the repository…)</p>
+<p>Meanwhile, everyone else in the company has updated, and jethro returns from his early lunch.  Thus far, 30 developers * (1 hour of build + 20 minutes of tests) = 40 man hours have been wasted.  Everyone knows it was Jethro when he gets back because the build indicates failure on a revision he checks in, but now all 30 developers are standing behind his desk, waiting for him to get trunk back into a working state and test the fix so they can get back to work.  That requires ‘’at least’’ another 1:20 of time waiting for the automated tests before Alice can commit her changes.</p>
+<p>Much of this waiting could have been circumvented if Jethro had checked his changes into a branch, and then asked the automated test system to run tests for him, and maybe had one other developer review it for him.  By the way, Buildbot has this feature, as do many other CI systems.</p>
+</section>
+</section>
+<section id="questions">
+<h2>Questions<a class="headerlink" href="#questions" title="Permalink to this headline">#</a></h2>
+<ul>
+<li><dl>
+<dt>“Why branches” isn’t as interesting to me (‘’meaning Jonathan Lange’’) as “Why tickets”. One of the things about UQDS that surprises people who do branch-based development is that it insists on putting all information about a change in a single ticket. Why not have feature discussion and code reviews on mailing lists, and then link to those discussions from the ticket? Or perhaps the ticket thing isn’t as “core” to UQDS as branches?</dt><dd><ul class="simple">
+<li><p>This needs to be integrated more clearly into the body of the document, but actually, tickets are ‘’more’’ core to UQDS than branches.  This is one of the reasons I changed the name from “branch based development” to “UQDS”.  Branches are just a mechanism for sharing work that’s in progress; you can still more or less follow the ‘’process’’ (while still taking the greater risk of losing work) just by exchanging and reviewing patches.  The ticket/not-a-ticket distinction, however, is key; it’s the way the whole process starts.</p></li>
+</ul>
+<p>At some point, someone in “management” needs to decide that it’s worth spending development resources on a particular task.  The particulars of who can make this decision, how it is made, when it is scheduled (etc, etc, etc) can differ in the extreme from project to project, but at some point it does need to be made.  Tickets are an explicit way of recording “this is work that should happen”.  It’s important to have an explicit, single mechanism for making this distinction, between “stuff we’re just talking about” and “stuff somebody should really do some work on”, specifically because of the huge number of differences between the way that these discussions are carried out on different projects.  Mailing lists are good because at least the discussion is recorded, but when you are communicating with people via mailing lists, via comments on tickets, via commit messages, via IRC, via phone conversations and via in-person meetings, everyone can have a different interpretation of what should be worked on and when.</p>
+<p>A ticket tracker (whatever its form) is a single unambiguous place where a unit of work can be named and identified, committed to, and tracked.  If your team has conventions for making these decisions on a mailing list crystal clear, and unambiguous terminology or conventions for identifying tasks, then your mailing list ‘’is’’ a ticket tracker.  On a consulting project, clarity becomes especially critical, because the client is always hoping that they can get a few extra features in for free, and will ambiguously talk in meetings about features that have not been agreed upon.  In a community project it seems that vagueness is a problem that you can live with, since anyone can file tickets and decide to do some work on their own anyway; however, I’ve found that once you start doing the rest of UQDS, this clarity becomes especially important because it becomes more likely that someone will go off and implement something on their own, then file a ticket and not understand why it’s getting rejected.  A ticket provides a much clearer record of the proposal and the rejection for future developers to look at than a mailing list discussion, because structured information accompanies the comments.</p>
+<p>As far as your question about why to actually record these things in a specific ticket tracker, like Trac, rather than using mailing lists for the discussion and then linking to it, this is simply an issue with deficiencies of the technologies.  Trac is a pain in the ass, Pipermail is a pain in the ass, bugzilla is a pain in the ass, launchpad is a pain in the ass, reviewboard is a pain in the ass, IRC log bots are a pain in the ass.  Web browsers in general are a pain in the ass.  These things have slightly varying levels of terribleness, but we can cope.  However, the more of them that you pile on top of each other, the worse the tangle becomes.</p>
+<p>If you’re running a UQDS project on SVN and Trac, let’s say, your users must already be proficient with their web browser, the trac UI, SVN commands, ‘patch’ and ‘diff’, just to deal with the basics of the process, let alone the skills they need to actually work on the code.</p>
+<p>Adding a mailing list to this process means that you have now added ‘’at least’’ an email client, the mailman UI, the pipermail UI, and a way to get from the email client UI to the message archive UI to generate links, plus some new magical markup in trac to generate appropriate-looking hyperlinks between ticket comments and email messages.  (Plus, you need a new username and password!)  Given a bunch of poor choices for what to do about reviews, putting discussions into the body of trac comments seems the least poor to me.</p>
+<p>As far as I’m concerned, though, you could follow UQDS to a T and get all the concomitant process benefits with separate technologies for tracking tasks, discussions, reviews, and specificationsm, and linking them all together.  In fact, ideally, that is how it would be done, but building such a system is highly challenging, and doing it so that I’d actually think the UI was any good would probably involve being an IDE-integrated piece of client software with a very discoverable UI that offers frequent, subtle suggestions for the next thing to do.  I would hope that web access to such a thing would be entirely read-only - if I fill out one more HTML form in my life, it will be too many times. –Glyph</p>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2022, TDB
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Ultimate Quality Development System (UQDS)</a><ul>
+<li><a class="reference internal" href="#why-branches">Why Branches ?</a><ul>
+<li><a class="reference internal" href="#keep-trunk-working">Keep <code class="docutils literal notranslate"><span class="pre">trunk</span></code> Working</a></li>
+<li><a class="reference internal" href="#switch-developers-mid-feature">Switch Developers Mid-Feature</a></li>
+<li><a class="reference internal" href="#provide-useful-progress-information-to-management">Provide Useful Progress Information to Management</a></li>
+<li><a class="reference internal" href="#mechanism-for-code-review">Mechanism for Code Review</a></li>
+<li><a class="reference internal" href="#generate-a-meaningful-changelog">Generate a Meaningful Changelog</a></li>
+<li><a class="reference internal" href="#revert-useful-units">Revert Useful Units</a></li>
+<li><a class="reference internal" href="#merge-when-you-re-merging-not-when-you-re-hacking">Merge When You’re Merging, Not When You’re Hacking</a></li>
+<li><a class="reference internal" href="#develop-on-a-preferred-platform-test-on-another-disturbing-no-one">Develop on a Preferred Platform, Test on Another, Disturbing No-one</a></li>
+<li><a class="reference internal" href="#cover-yourself">Cover yourself</a></li>
+<li><a class="reference internal" href="#some-thoughts-on-things-i-don-t-know-anything-about">Some Thoughts on Things I Don’t Know Anything About</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#questions">Questions</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/scripts/furo.js"></script>
+    </body>
+</html>

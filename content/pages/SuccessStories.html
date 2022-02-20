@@ -1,0 +1,456 @@
+<!doctype html>
+<html class="no-js">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" />
+
+    <meta name="generator" content="sphinx-4.4.0, furo 2022.02.14.1"/>
+        <title>SuccessStories - Twisted documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=a8f031f701c6af50c9919b48f173a5785af06fac" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=25ceb02ed1c46dc30f2321ff83e92799f69dfdb9" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  body[data-theme="dark"] {
+    --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    body:not([data-theme="light"]) {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+  }
+</style></head>
+  <body>
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../index.html"><div class="brand">Twisted  documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
+  
+  
+  <span class="sidebar-brand-text">Twisted  documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
+  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="successstories">
+<h1>SuccessStories<a class="headerlink" href="#successstories" title="Permalink to this headline">#</a></h1>
+<p><strong>Have a success story for Twisted? Let us know! Contact success at twistedmatrix dot com</strong></p>
+<section id="id1">
+<h2><a class="reference external" href="https://zont-online.ru/">ZONT Online</a><a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h2>
+<p>ZONT Online is an online platform for monitoring and control of internet-connected smart devices. We use Twisted from the first days in 2011 to power our fully-asynchronous python backend.</p>
+<p>Twisted powers a wide range of our server-side tasks: user-facing and API web servers, websockets, queue workers, custom TCP/IP servers, email and push sending, 3rd-party API integrations and so on.</p>
+<p>We found Twisted to be mature, well-designed and having batteries included. Its networking primitives are flexible enough to build a wide range of services and to integrate with both blocking and non-blocking libraries.</p>
+<p>Special mention should be made about how carefully Twisted team documents its releases and maintains backward-compatibility. During the 10 years of our work with Twisted we continuously migrated through almost all Python versions from 2.7 to 3.9 and Twisted versions from 11.0.0 to 21.7.0 without notable surprises.</p>
+<p>– Ilya Skriblovsky, Lead of Online Services Development, ZONT Online Ltd.</p>
+</section>
+<section id="id2">
+<h2><a class="reference external" href="https://www.battlehouse.com">Battlehouse Games</a><a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
+<p>Battlehouse creates and operates massively-multiplayer strategy games for browser and desktop platforms. Our most popular titles are nearly 10 years old and have served over 4 million users.</p>
+<p>Twisted plays an important role in our Python-based server stack. We use Twisted to handle many protocols including HTTP, WebSockets, and SQL. The asynchronous coroutine model helps us deliver low-latency gameplay without adding too much complexity to the codebase. Across 10 years of continuous evolution, Twisted has proven to be the most stable, well-documented, and flexible low-level networking library for Python.</p>
+<p>– Dan Maas, CTO, Battlehouse Games</p>
+</section>
+<section id="id3">
+<h2><a class="reference external" href="https://github.com/labrad">LabRAD</a><a class="headerlink" href="#id3" title="Permalink to this headline">#</a></h2>
+<p><a class="reference external" href="https://github.com/labrad">LabRAD</a> is an RPC system designed for use in scientific research labs, presently in use by <a class="reference external" href="https://github.com/labrad/labrad/wiki/Who-uses-LabRAD">more than a dozen academic and industrial labs around the world</a>.</p>
+<p>The labrad python API has used Twisted for networking and asynchrony since around 2005, and Twisted continues to serve our needs well. Most of our servers use Python, and most LabRAD users use Python to run experiments; Twisted is an essential component for us on both the client and server sides. We particularly like the explicit coroutine style of asynchronous code made possible by the @inlineCallbacks decorator.</p>
+<p>– Daniel Sank, LabRAD Project</p>
+</section>
+<section id="id5">
+<h2><a class="reference external" href="http://lucasfilm.com/">Lucasfilm</a><a class="headerlink" href="#id5" title="Permalink to this headline">#</a></h2>
+<p>Lucasfilm has used Twisted in its business-critical production
+processes since 2004. In 2009 we became sponsors of the project.</p>
+<p>We use Twisted to proxy database connections for our render farm,
+which runs 24/7/365. In continuous deployment for six years, our
+Twisted daemons have served many billions of queries. Twisted’s
+process spawning and monitoring capabilities are also used in numerous
+automation and queuing services. In addition, its excellent,
+full-featured Jabber implementation supports our person-to-person and
+application-to-application messaging services.</p>
+<p>As a large and diverse enterprise, a key to our success with Twisted
+is the professional way in which it is maintained. With a large body
+of unit tests and rigorous code reviews, Twisted provides a smooth
+upgrade path so that old features to continue to work and new ones
+are production ready and rock-solid.</p>
+<p>– Dave Peticolas, Lead Python Developer, Lucasfilm Entertainment Company Limited</p>
+</section>
+<section id="id6">
+<h2><a class="reference external" href="http://fluidinfo.com/">FluidDB</a><a class="headerlink" href="#id6" title="Permalink to this headline">#</a></h2>
+<p>At Fluidinfo, we’re heavy users of Twisted. All of our infrastructure depends on it. FluidDB, our social database, is entirely built on Twisted, and we’ve released several core parts of it as open source: <a class="reference external" href="https://launchpad.net/txamqp">txAMQP</a> , <a class="reference external" href="https://launchpad.net/txrdq">txRDQ</a> and <a class="reference external" href="https://issues.apache.org/jira/browse/THRIFT-148">txThrift</a>. Not only that, but we have contributed to Twisted both with code and (albeit small) personal donations.</p>
+<p>It’s not just that sponsoring was the fair the thing to do, it has also produced tremendous results in a framework crucial to our business. When you donate to the TSF it’s simple math that more bugs get fixed, but also the quality of the entire Twisted project is enhanced. And when that happens, all of our products are enhanced automatically without us writing one line of code. So sponsoring is not just an act of generosity, it’s an investment in Fluidinfo. Using and sponsoring Twisted has been an indispensable “force multiplier” for a growing start-up like us.</p>
+<p>– Esteve Fernandez, CTO, Fluidinfo Inc.</p>
+<p>At Fluidinfo we chose Twisted as the basis of all internal networking for our
+distributed, shared, always-writable database, FluidDB. We threw out
+a year’s worth of working, debugged, tested C code in order to move to Twisted. As
+I often tell people, we’re using Python because of Twisted, not the other
+way round. I’m an unabashed Twisted fanboy. In particular,
+Twisted’s Deferreds are one of the most elegant and flexible
+programming constructs I’ve ever worked with.
+Plus, the Twisted community is great - not only the core developers,
+but also the 180+ people constantly in #twisted in IRC.</p>
+<p>– Terry Jones, CEO, Fluidinfo Inc.</p>
+</section>
+<section id="id7">
+<h2><a class="reference external" href="http://launchpad.net/">Launchpad</a><a class="headerlink" href="#id7" title="Permalink to this headline">#</a></h2>
+<p>Canonical has been using Twisted as key part of Launchpad.net for over
+five years now. We use Twisted to run our SSH servers, our process
+pools, our package build farms, our file storage system and many other
+things. Practically every time we need to glue two systems together,
+we use Twisted. When we don’t, we regret it later.</p>
+<p>– Jonathan Lange, Product Strategist, <a class="reference external" href="http://www.canonical.com/">Canonical Ltd</a></p>
+</section>
+<section id="id8">
+<h2><a class="reference external" href="http://www.hipchat.com">HipChat</a><a class="headerlink" href="#id8" title="Permalink to this headline">#</a></h2>
+<p>HipChat is a hosted group chat and IM service for businesses that uses the XMPP protocol behind the scenes. We use Twisted to power our fully clustered chat server and run many important job queue workers.</p>
+<p>Twisted’s built-in XML support via the Twisted.Words and xmlstream modules have been life savers since XMPP is very XML heavy. They’ve been rock-solid and keep us from having to work with with XML directly which is a wonderful thing.</p>
+<p>One of the greatest time savers is the combination of Deferreds and the @defer.inlineCallbacks decorator. These allow us to write code that is asynchronous but stays easy to read and maintain. No more getting lost in a sea of callback functions. I mention it because I truly miss them when playing with Node.js, particularly Python’s ‘yield’ and Twisted’s Deferreds! I feel crippled without them.</p>
+<p>Bottom line: we built and launched a successful business on Twisted &amp; Python in 6 months with no prior knowledge of either. It’s a very productive environment with great performance and maintainability. What more could you want?</p>
+<p>– Garret Heaton, Co-founder, <a class="reference external" href="http://www.hipchat.com">HipChat</a></p>
+</section>
+<section id="id10">
+<h2><a class="reference external" href="http://www.justin.tv/">Justin.tv</a><a class="headerlink" href="#id10" title="Permalink to this headline">#</a></h2>
+<p>Justin.tv is the largest live video site on the internet.  We allow anyone to broadcast live video from their PC and chat with viewers.  Every second of every broadcast is archived so it can later be browsed, searched, or made into highlight clips.</p>
+<p>Each of Justin.tv’s half a billion monthly pageviews passes through a custom Twisted caching engine.  “Twice” is a caching reverse proxy with a basic templating engine.  It runs as a cluster of roughly 120 processes across a dozen machines and handles peak loads of 20,000 dynamic pageviews per second.  The project has been <a class="reference external" href="http://www.kvogt.com/twice">open sourced here</a></p>
+<p>– Kyle Vogt, VP Engineering, Justin.tv, Inc.</p>
+</section>
+<section id="id11">
+<h2><a class="reference external" href="http://www.tweetdeck.com">TweetDeck</a><a class="headerlink" href="#id11" title="Permalink to this headline">#</a></h2>
+<p>TweetDeck aims to build a browser for the
+real-time web. Right now we’re the biggest Twitter client after the
+website itself, and are rolling out full integration with Facebook and
+other services. With TweetDeck you can organize real-time streams of
+information into a convenient grid format that allows easy digestion.</p>
+<p>We use Twisted to power our backend services, specifically our new
+accounts system and sync functionality we introduced recently
+(<a class="reference external" href="http://tweetdeck.com/beta/features/take-tweetdeck-with-you/">http://tweetdeck.com/beta/features/take-tweetdeck-with-you/</a>). We’ve
+deployed our Twisted services over the Amazon cloud - specifically, we
+use EC2 and SimpleDB. Writing a REST api service used by hundreds of
+thousands active users was a snap with Twisted. We’ll continue to use
+Twisted as we broaden our server-side processing goals.</p>
+<p>– Reza Lotun, Software Engineer, TweetDeck, Inc.</p>
+</section>
+<section id="id12">
+<h2><a class="reference external" href="http://www.evennia.com/">Evennia</a><a class="headerlink" href="#id12" title="Permalink to this headline">#</a></h2>
+<p>Evennia is a modern Python MUD/MUX/MU* server, aimed at the easy creation of text-based massively multi-user online games. We use Twisted for all our networking needs, along with <a class="reference external" href="http://www.djangoproject.com/">Django</a> for database abstraction and web features. The two work beautifully together.</p>
+<p>When developing Evennia we have found that using Twisted not only gives us great performance advantages, but also helps us to easily expand on the ways people connect to Evennia-powered games. Whereas traditional MUD servers only speak telnet, Evennia additionally comes with its own browser-based client and allows for expanding with custom game protocols in any combination. Evennia also serves the MUD’s website, alleviating the need to install and set up a third-party web server. All of this is straightforward to implement and maintain thanks to Twisted!</p>
+<p>– Griatch, Maintainer, Evennia project</p>
+</section>
+<section id="nasa">
+<h2>NASA<a class="headerlink" href="#nasa" title="Permalink to this headline">#</a></h2>
+<p>My team is developing a modular application to integrate CAD/CAE/CAM tools and data and to enable collaboration among distributed teams of engineers working on NASA projects. We have selected Twisted as our framework because of its pluggable, asynchronous protocols, support for multiple interfaces and protocols per service, integration with PostgreSQL, and just generally excellent layered architecture.</p>
+<p>– Stephen C. Waterbury, NASA</p>
+</section>
+<section id="id13">
+<h2><a class="reference external" href="http://www.sharedsolar.org/">Shared Solar</a><a class="headerlink" href="#id13" title="Permalink to this headline">#</a></h2>
+<p><a class="reference external" href="http://www.sharedsolar.org/">Shared Solar</a> is a rural electrification
+project providing over 3000 people with electricity in sub-Saharan
+Africa (Mali and Uganda) with proposed deployments in Kenya and Haiti.
+Due to the nature of the physical environments, and the model of
+distributed generation, we need to have local intelligence at our
+sites for the distribution of prepaid electricity and management of
+the deployed infrastructure.</p>
+<p>This distributed/local intelligence is built using Twisted. Twisted
+has helped me prototype and deploy rapidly, learn and react quickly to
+on-the-ground issues as they arise, and adapt the service to
+configurations using different hardware and protocols. Without the
+services built around Twisted, I’m certain the project would not be as
+successful - it has helped us turn otherwise static infrastructure
+into something much more in very short time.</p>
+<p>Huge thanks to the Twisted community for their great work and making
+this possible. I’d also like to acknowledge the wonderful support by
+the folks on irc:#twisted.</p>
+<p>– Rajesh Menon, Software Engineer, SharedSolar</p>
+</section>
+<section id="id15">
+<h2><a class="reference external" href="http://www.hybrid-cluster.com/">HybridLogic</a><a class="headerlink" href="#id15" title="Permalink to this headline">#</a></h2>
+<p><a class="reference external" href="http://www.hybrid-cluster.com/">Hybrid Web Cluster</a> is a load-balanced and redundant web cluster built in Twisted which supports all standard LAMP websites.</p>
+<p>The web cluster uses ZFS on FreeBSD for its unique ability to efficiently send differential snapshots over a network. But it is Twisted that has enabled us to turn that capability into a cluster filesystem. Everything is asynchronous, for example:</p>
+<ul class="simple">
+<li><p>polling “zfs list” and “zfs mount” for filesystem state</p></li>
+<li><p>communicating with other nodes via XML over Spread</p></li>
+<li><p>reconfiguring distributed servers on-the-fly</p></li>
+<li><p>handling thousands of internally proxied requests over thousands of sockets simultaneously.</p></li>
+</ul>
+<p>Without Twisted we’d have to rely on threads, or spend valuable time writing an event loop that wouldn’t be anywhere near as spectacular as Twisted’s. Twisted has enabled us to focus on building phenomenal features (like seamlessly moving websites and databases between servers) instead of wasting precious resources re-inventing wheels.</p>
+<p>Using Twisted has been massively beneficial for us. Not only have the
+experts been always on-hand in real-time on IRC, but the code quality
+and the expressive power of the library is unparalleled. In particular
+the combination of Perspective Broker with Deferreds make expressing
+otherwise tricky distributed algorithms a pleasure.</p>
+<p>Twisted has been crucial at Hybrid Logic for making an awesome Hybrid Web Cluster platform that guarantees our customers’ sites are fast and their data is safe at all times.</p>
+<p>Thank you Twisted!</p>
+<p>– Luke Marsden, CTO, HybridLogic Ltd.</p>
+</section>
+<section id="powercard">
+<h2>PowerCard<a class="headerlink" href="#powercard" title="Permalink to this headline">#</a></h2>
+<p>PowerCard is the software platform we developed for <a class="reference external" href="http://www.powercard.com/">PowerCard Rewards</a> and the Original Rewards program for <a class="reference external" href="http://originalrestaurants.com/">Original Restaurants</a>. Original Restaurants promotes unique, local restaurants by providing cooperative marketing, customer sharing, and a distinctive Rewards Card program.</p>
+<p>We use Twisted extensively for back-end transaction services for the loyalty rewards and gift card programs. We also used Twisted in our client-side applications installed in demanding restaurant environments. Twisted was crucial in our ability to craft solutions to interoperate with multiple restaurant POS vendors (Micros, Aloha/Radiant, Squirrel, etc.), each with differing protocols and access methods. Our choice of Python and Twisted allows us to rather easily extend our system to support new features and requests with limited amount of developer time and budget.</p>
+<p>Key features for us:</p>
+<ul class="simple">
+<li><p>Easy implementation of custom and existing network protocols</p></li>
+<li><p>Consistent APIs for code sharing between client and server implementations</p></li>
+<li><p>Windows integration</p></li>
+<li><p>Client GUI applications</p></li>
+<li><p>Services are a snap to implement</p></li>
+<li><p>Community support is very helpful</p></li>
+</ul>
+<p>– Lucas Taylor, CTO, PowerCard</p>
+</section>
+<section id="id16">
+<h2><a class="reference external" href="http://botonomy.com/">Botonomy LLC</a><a class="headerlink" href="#id16" title="Permalink to this headline">#</a></h2>
+<p>Botonomy LLC is a small software firm in the Philadelphia area. We help small teams solve large problems.</p>
+<p>Our first application, <a class="reference external" href="http://www.projectpipe.com/">ProjectPipe</a> , is a hosted project management solution that provides midsize teams with everything that they need to manage IT projects. We have built our hosted application infrastructure atop Twisted, Nevow, PostgreSQL, and Jabber/XMPP. Twisted’s multi-protocol support has been one of the key enablers of the unique technical architecture that we employ in our product offerings.</p>
+<p>The core Twisted development team consistently demonstrates a strong commitment to delivering robust, high quality software. Twisted’s documentation is accurate and concise, and the expertise and helpfulness of the larger developer community is second-to-none.</p>
+<p>When evaluating the technologies on which you are staking your business, you need to evaluate both the code and the community that surrounds it. Twisted passes with flying colors in both regards.</p>
+<p>– Christian Simms, Botonomy LLC</p>
+</section>
+<section id="id17">
+<h2><a class="reference external" href="http://www.reflexionsdata.com/">Reflexions Data</a><a class="headerlink" href="#id17" title="Permalink to this headline">#</a></h2>
+<p>At Reflexions Data, we provide custom development services for a wide variety of clients. We recently completed work on a project for a new client; the timeframe available required us to expedite every step of the development process. Twisted allowed us to quickly implement a custom client/server protocol with a wide variety of extra functionality for free.</p>
+<p>The quality of the Twisted networking core is unmatched in the open- or closed-source arenas. Due largely to its asynchronous networking model, we were able to ensure our clients scalability needs would be met.</p>
+<p>Our experiences with the Twisted developer community were top- notch; the turnaround time on questions posted to the developer mailing list was simply amazing. We were so pleased with the results of our first professional use of the Twisted core that we plan on investigating how we can make use of the other facets of the Twisted project.</p>
+<p>– Phil Christensen, Senior Developer, Reflexions Data, LLC</p>
+</section>
+<section id="id18">
+<h2><a class="reference external" href="http://www.mastersofbranding.com/">Masters of Branding</a><a class="headerlink" href="#id18" title="Permalink to this headline">#</a></h2>
+<p>At Masters of Branding we use Twisted as the networking core for all of our client and server RFID software. It was by far the easiest framework to develop with, debug under, and extend for our purposes to support protocols such as SOAP, HTTP, and Macromedia Flash-compatible XML Sockets. The API and event model are both very well thought out and has accommodated all of our networking needs from database-heavy server software on Linux to (py)OpenGL visualization applications on win32.</p>
+<p>The ease and power of Python and Twisted really showed through when we took one of our applications developed in and for Linux and ported it to run as a Windows NT service in less than day. New users to the framework will not only be impressed by the power of the software, but also that the developer/user community responsible for it are incredibly helpful and often provide much better support in minutes or hours than you’ll see from commercial shops given days or weeks.</p>
+<p>– Bob Ippolito, CTO, Masters of Branding Inc.</p>
+</section>
+<section id="id19">
+<h2><a class="reference external" href="http://www.adelux.fr/">Adelux</a><a class="headerlink" href="#id19" title="Permalink to this headline">#</a></h2>
+<p>Adelux develops custom internet applications such as portals, network security tools, communication-related programs, and software that leverages other systems.</p>
+<p>We discovered Twisted 10 months ago, and now it is a key element of our development strategy. We have successfully used Twisted on several projects, of very different problem domains.</p>
+<p>We developed a highly scalable realtime application for customer support, which serves web-based clients as well as clients implemented in any of the many protocols supported by Twisted. Twisted was also used to develop targeted proxies for various applications supporting more than 15.000 users. Twisted handles the charge with no problem.</p>
+<p>We intend to continue using Twisted on upcoming projects, especially since integrated support for databases and new services are being added very quickly.</p>
+<p>We found Twisted to be powerful, comprehensible, well documented, and backed by a good helpful community. We’ll use it on our next products for sure!</p>
+<p>– Luc Stepniewski, Head Engineer, Adelux, France</p>
+</section>
+<section id="mc-foo-and-ldaptor">
+<h2>MC-Foo and Ldaptor<a class="headerlink" href="#mc-foo-and-ldaptor" title="Permalink to this headline">#</a></h2>
+<p>I was writing <a class="reference external" href="http://mc-foo.sf.net/">MC Foo</a> , a networked multiuser learning Ogg/MP3 jukebox application, in C, and was frustrated about the amount of time it took to debug. I decided I should use a higher-level language. I liked how Python felt, but had never written a single line of Python. I decided it was time to learn. Five hours later, the core of my application was rewritten in Python, using Twisted for main loop and networking. Another five hours later, I had replaced my oversimplistic line-based protocols with PB, the Twisted RPC protocol. Twisted has also enabled me to easily add features such as implicit persistence into MC Foo. And it even has nice GUI integration, allowing one to do sane networking in a GUI application.</p>
+<p>Since then, I have created <a class="reference external" href="http://www.inoi.fi/open/trac/ldaptor/">Ldaptor</a>, a pure-Python LDAP library, utilities and a web interface, as a data structure library, Twisted protocol and Twisted applications. The way how the web interface plugs in with the LDAP protocol handling still manages to amaze me.</p>
+<p>The developer community behind Twisted is just great, and the IRC channel is a great source of information. All in all, I feel Twisted is one of the most interesting projects on the net.</p>
+<p>– Tommi Virtanen</p>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2022, TDB
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">SuccessStories</a><ul>
+<li><a class="reference internal" href="#id1">ZONT Online</a></li>
+<li><a class="reference internal" href="#id2">Battlehouse Games</a></li>
+<li><a class="reference internal" href="#id3">LabRAD</a></li>
+<li><a class="reference internal" href="#id5">Lucasfilm</a></li>
+<li><a class="reference internal" href="#id6">FluidDB</a></li>
+<li><a class="reference internal" href="#id7">Launchpad</a></li>
+<li><a class="reference internal" href="#id8">HipChat</a></li>
+<li><a class="reference internal" href="#id10">Justin.tv</a></li>
+<li><a class="reference internal" href="#id11">TweetDeck</a></li>
+<li><a class="reference internal" href="#id12">Evennia</a></li>
+<li><a class="reference internal" href="#nasa">NASA</a></li>
+<li><a class="reference internal" href="#id13">Shared Solar</a></li>
+<li><a class="reference internal" href="#id15">HybridLogic</a></li>
+<li><a class="reference internal" href="#powercard">PowerCard</a></li>
+<li><a class="reference internal" href="#id16">Botonomy LLC</a></li>
+<li><a class="reference internal" href="#id17">Reflexions Data</a></li>
+<li><a class="reference internal" href="#id18">Masters of Branding</a></li>
+<li><a class="reference internal" href="#id19">Adelux</a></li>
+<li><a class="reference internal" href="#mc-foo-and-ldaptor">MC-Foo and Ldaptor</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/scripts/furo.js"></script>
+    </body>
+</html>

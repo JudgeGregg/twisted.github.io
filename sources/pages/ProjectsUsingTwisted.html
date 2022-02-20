@@ -1,0 +1,399 @@
+<!doctype html>
+<html class="no-js">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" />
+
+    <meta name="generator" content="sphinx-4.4.0, furo 2022.02.14.1"/>
+        <title>Projects Using Twisted - Twisted Documentation documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?digest=a8f031f701c6af50c9919b48f173a5785af06fac" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?digest=25ceb02ed1c46dc30f2321ff83e92799f69dfdb9" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  body[data-theme="dark"] {
+    --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    body:not([data-theme="light"]) {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+  }
+</style></head>
+  <body>
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../index.html"><div class="brand">Twisted Documentation  documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
+  
+  
+  <span class="sidebar-brand-text">Twisted Documentation  documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
+  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="projects-using-twisted">
+<h1>Projects Using Twisted<a class="headerlink" href="#projects-using-twisted" title="Permalink to this headline">#</a></h1>
+<p>Twisted is used by many open-source, academic and commercial projects.</p>
+<p><strong>Got a successful project you’d like added to this page?</strong> Mail a brief description and an URL (if appropriate) to success at twistedmatrix dot com!</p>
+<section id="community-code-project">
+<h2>Community Code Project<a class="headerlink" href="#community-code-project" title="Permalink to this headline">#</a></h2>
+<p><a class="reference external" href="https://launchpad.net/tx">Twisted Community Code</a>  - This is a <a class="reference external" href="/sphinxwiki/content/pages/CommunityCode.html">super project</a> hosting or mirroring many Twisted add-ons, Twisted-based libraries, etc., that are not part of the Twisted Project proper, but depend upon it.</p>
+</section>
+<section id="libraries-and-add-ons">
+<h2>Libraries and Add-Ons<a class="headerlink" href="#libraries-and-add-ons" title="Permalink to this headline">#</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="https://launchpad.net/ampoule">Ampoule</a> - Ampoule is a process pool implementation written on top of Twisted Matrix. Its name comes from the use of AMP as the default communication protocol between the pool and all its children.</p></li>
+<li><p><a class="reference external" href="http://beepy.sourceforge.net">BEEPy</a> - BEEP protocol implementation for Python.</p></li>
+<li><p><a class="reference external" href="https://launchpad.net/corotwine">Corotwine</a> - Coroutine-based APIs for Twisted. Corotwine lets you use Twisted with a blocking API.</p></li>
+<li><p><a class="reference external" href="https://launchpad.net/foolscap">foolscap</a> - A Python library that implements object-capability style secure remote objects.</p></li>
+<li><p><a class="reference external" href="https://github.com/twisted/ldaptor">Ldaptor</a> - LDAP protocol implementation and utilities.</p></li>
+<li><p><a class="reference external" href="https://launchpad.net/mutant">M.U.T.A.N.T</a> - A library for doing test-driven GTK user-interfaces for Twisted programs.</p></li>
+<li><p><a class="reference external" href="https://launchpad.net/paisley">Paisley</a> - Paisley is a CouchDB client written in Python to be used within a Twisted application.</p></li>
+<li><p><a class="reference external" href="http://pyamf.org">PyAMF</a> - Python support for the <a class="reference external" href="http://en.wikipedia.org/wiki/Action_Message_Format">AMF Format</a>, used for RPC communication with Adobe’s Flash Player</p></li>
+<li><p><a class="reference external" href="http://ichi2.net/pyosd/">PyOSD</a> - module for displaying text on your X display, much like the “On Screen Displays” used on TVs and some monitors.</p></li>
+<li><p><a class="reference external" href="https://github.com/wichert/pyrad/">pyrad</a> - A RADIUS client/server implementation with a Twisted wrapper.</p></li>
+<li><p><a class="reference external" href="https://launchpad.net/python-tvi955">python-tvi955</a> - Python-TVI955 is a partial implementation of the TVI955 terminal. It includes a parser for the computer to terminal (“server to client”) protocol and an in-memory terminal emulator.</p></li>
+<li><p><a class="reference external" href="https://launchpad.net/qt4reactor">Qt4 Reactor</a> - Integration of Twisted and Qt4</p></li>
+<li><p><a class="reference external" href="http://pypi.python.org/pypi/sAsync/0.7">sAsync</a> - SQLAlchemy done Asynchronously.</p></li>
+<li><p><a class="reference external" href="http://rtmpy.org">RTMPy</a> - Implementation of the <a class="reference external" href="http://en.wikipedia.org/wiki/Real_Time_Messaging_Protocol">RTMP Protocol</a>, used for audio/video/data streaming to Adobe’s Flash Player</p></li>
+<li><p><a class="reference external" href="http://scrapy.org/">Scrapy</a> - a screen scraping and web crawling framework, used to crawl websites and extract structured data from their pages.</p></li>
+<li><p><a class="reference external" href="https://launchpad.net/synchronous-deferred">Synchronous Deferred</a> - Synchronous Deferred is for authors of libraries who want to support both synchronous and asynchronous APIs.</p></li>
+<li><p><a class="reference external" href="http://trevp.net/tlslite/">TLS Lite</a> - Python TLS/SSL implementation.</p></li>
+<li><p><a class="reference external" href="https://launchpad.net/torc">Torc</a> - An implementation of Orc, a language for orchestrating distributed services, for the Twisted networking framework.</p></li>
+<li><p><a class="reference external" href="https://github.com/dreid/treq">treq</a> - Python requests like API built on top of Twisted’s HTTP client.</p></li>
+<li><p><a class="reference external" href="http://code.google.com/p/twistedcronservice/">TwistedCronService</a> - Provides an interface for describing recurring events to be run according to a cron-like schedule.</p></li>
+<li><p><a class="reference external" href="http://twistedsnmp.sourceforge.net/">TwistedSNMP</a> - PySNMP integration for Twisted.</p></li>
+<li><p><a class="reference external" href="https://launchpad.net/twisted-x11">twisted-x11</a> - Experimental low-level implementation of the X11 protocol on top of twisted. This is pure python, it does not wrap libxcb or libX11. This means it does not integrate with existing libraries. It uses the xml protocol definitions from xcb, so it is pretty complete.</p></li>
+<li><p><a class="reference external" href="https://launchpad.net/twotp">Twotp</a> - Twotp is an implementation of the Erlang node protocol written in Python using the Twisted networking engine. It makes possible to run an Erlang node in Python, like the Jinterface library of Erlang allows to do in Java. You can then call methods on an Erlang node or receive method calls.</p></li>
+<li><p><a class="reference external" href="https://launchpad.net/tx.memcache">txmemcache</a> - Multi-Client and Hashing utilities on top of twisted.protocols.memcache.</p></li>
+<li><p><a class="reference external" href="https://launchpad.net/txamqp">txAMQP</a> - Python library for communicating with AMQP peers and brokers using Twisted (RabbitMQ, Qpid, OpenAMQ). It also includes support for using Thrift RPC over AMQP in Twisted applications.</p></li>
+<li><p><a class="reference external" href="https://launchpad.net/txaws">txAWS</a> - Twisted-based Asynchronous Libraries for Amazon Web Services and Eucalyptus private clouds.</p></li>
+<li><p><a class="reference external" href="https://launchpad.net/txcobalt">txCobalt</a> - An async, Twisted-based Python library for Bluetooth communications.</p></li>
+<li><p><a class="reference external" href="https://launchpad.net/txcomputegrid">txcomputegrid</a> - Twisted based compute grid.</p></li>
+<li><p><a class="reference external" href="https://launchpad.net/txcumulus">txCumulus</a> - The goal of txCumulus is to provide an abstraction layer on top of other Twisted-based (Python) async cloud APIs such as txAWS and txRackspace (and possibly txComputeGrid).</p></li>
+<li><p><a class="reference external" href="https://github.com/jcollie/txdnspython">txdnspython</a> - txdnspython is a way to use dnspython to create and manipulate DNS messages and then send those messages over the network using Twisted’s asynchronous networking.</p></li>
+<li><p><a class="reference external" href="https://launchpad.net/txevolver">txEvolver</a> - txEvolver is a Twisted-based set of libraries for performing calculations of genetic algorithms as well as genetic programs in an asynchronous, distributed manner.</p></li>
+<li><p><a class="reference external" href="https://launchpad.net/txfigleaftrial">txFigleafTrial</a> - Allows you to use figleaf to generate code coverage reports with twisted.trial.</p></li>
+<li><p><a class="reference external" href="https://launchpad.net/txfluiddb">txFluidDB</a> - Bindings for the <a class="reference external" href="http://fluidinfo.com">FluidDB</a> HTTP interface.</p></li>
+<li><p><a class="reference external" href="https://launchpad.net/txgenshi">txGenshi</a> - This project provides a small Twisted/Nevow package for running Genshi templates in the Twisted web framework, Nevow.</p></li>
+<li><p><a class="reference external" href="https://github.com/dr4ke616/txGraylog">txGraylog</a> - txGraylog is a Twisted-based client for Graylog servers. It supports multiple interfaces to send log messages to the server including: TCP and UDP (using either plain text or the Gelf protocol)</p></li>
+<li><p><a class="reference external" href="https://launchpad.net/txjsonrpc">txJSON-RPC</a> - This is the project page for creating Python JSON-RPC servers and clients using the Twisted Networking Engine.</p></li>
+<li><p><a class="reference external" href="https://launchpad.net/txm">txM</a> - Twisted for microcontrollers. txM aims to provide the Twisted asynchronous network programming idiom for solid-state devices without operating systems via the Python-on-a-chip Python VM.</p></li>
+<li><p><a class="reference external" href="https://launchpad.net/txmailserver">txMailServer</a> - This project provides a starter mail server written using Twisted.</p></li>
+<li><p><a class="reference external" href="https://launchpad.net/txnet">txNetTools</a> - Ping, traceroute, icmp, etc., implemented in Twisted, and a library for those who want to build their own network tools.</p></li>
+<li><p><a class="reference external" href="https://launchpad.net/txnetflow">txNetFlow</a> - !NetFlow and IPFIX protocol, client, and server support in Twisted.</p></li>
+<li><p><a class="reference external" href="https://launchpad.net/txprotobuf">txProtoBuf</a> - Protocol buffers (<a class="reference external" href="http://code.google.com/p/protobuf/">http://code.google.com/p/protobuf/</a>) RPC implemented using Twisted.</p></li>
+<li><p><a class="reference external" href="https://launchpad.net/txrackspace">txRackspace</a> - An async, Twisted Python API for Rackspace Cloud.</p></li>
+<li><p><a class="reference external" href="https://launchpad.net/txrdq">txRDQ</a> - Provides a !ResizableDispatchQueue class that gives you a queue to dispatch jobs and a pool of in-progress tasks. This is a combination of a Twisted defer.DeferredQueue and a task.Cooperator.</p></li>
+<li><p><a class="reference external" href="http://github.com/deldotdr/txRedis">txRedis</a> - A Redis client library for Twisted Python.</p></li>
+<li><p><a class="reference external" href="https://launchpad.net/txremotedeploy">txRemoteDeploy</a> - Remote deployment for Twisted applications.</p></li>
+<li><p><a class="reference external" href="https://launchpad.net/txsimpledb">txSimpleDB</a> - Twisted support for Amazon’s SimpleDB with the ability to develop/test against a local SimpleDB instance.</p></li>
+<li><p><a class="reference external" href="https://launchpad.net/txsmug">txSmug</a> - A Twisted wrapper for !SmugMug’s API.</p></li>
+<li><p><a class="reference external" href="https://launchpad.net/txspore">txSpore</a> - An asynchronous Spore Python API using Twisted.</p></li>
+<li><p><a class="reference external" href="https://launchpad.net/txsshserver">txsshserver</a> - Extends Twisted’s SSH server with some useful features for hosting Bazaar branches. Much of this code could &amp; should be rolled back into Twisted. The project provides a playground for experimenting with new extensions, a holding area for the extensions we’ve already written, and a home for the things that don’t really belong in Twisted.</p></li>
+<li><p><a class="reference external" href="https://launchpad.net/txstomp">txStomp</a> - txStomp is a Twisted implementation of the open protocol Stomp and allows for Twisted applications to be integrated in environments (e.g., ones that use ActiveMQ) that depend on this technology.</p></li>
+<li><p><a class="reference external" href="https://launchpad.net/txuls">txULS</a> - Twisted Python experiments and prototyping for ultra large-scale systems.</p></li>
+<li><p><a class="reference external" href="https://launchpad.net/txxcp">txXCP</a> - This project is focused on developing an open source, Twisted-based version of Jabber XCP.</p></li>
+<li><p><a class="reference external" href="https://launchpad.net/wokkel">Wokkel</a> - Wokkel is collection of enhancements on top of the Twisted networking framework, written in Python. It mostly provides a testing ground for enhancements to the Jabber/XMPP protocol implementation as found in Twisted Words, that are meant to eventually move there.</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="applications">
+<h2>Applications<a class="headerlink" href="#applications" title="Permalink to this headline">#</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="http://apt-proxy.sourceforge.net">apt-proxy2</a> - caching proxy for Debian apt-get clients.</p></li>
+<li><p><a class="reference external" href="http://buildbot.sf.net">BuildBot</a> - a distributed building/testing framework.</p></li>
+<li><p><a class="reference external" href="http://cia.navi.cx/">CIA Bot</a> - notification system, used by many projects for source code checkin notification.</p></li>
+<li><p><a class="reference external" href="http://crowsnest.sf.net">Crow’s Nest</a> - collect log information from various sources and to apply some filter to them in a very modular way.</p></li>
+<li><p><a class="reference external" href="http://twistedmatrix.com/users/acapnotic/wares/code/CVSToys/">CVSToys</a> - CVS change notification via email, IRC and HTTP.</p></li>
+<li><p><a class="reference external" href="http://divmod.org/trac/wiki/DivmodQuotient">Quotient</a> - multi-protocol messaging server with tools for information management and retrieval, including a mail server (SMTP/POP3/IMAP/webmail) and much more.</p></li>
+<li><p><a class="reference external" href="http://www.infrae.com/download/DocmaServer">DocmaServer</a> - batch processing server that does Word &lt;-&gt; XML conversion.</p></li>
+<li><p><a class="reference external" href="http://www.dohop.com">dohop.com</a> - a flight planning web site which searches many other flight databases.</p></li>
+<li><p><a class="reference external" href="http://home.jongsma.org/software/downpour/">Downpour</a> - a web-based !BitTorrent client.</p></li>
+<li><p><a class="reference external" href="http://freevo.sourceforge.net/">Freevo</a> - open-source home theatre and PVR PC platform.</p></li>
+<li><p><a class="reference external" href="http://www.flumotion.net/">Flumotion</a> - a streaming media server.</p></li>
+<li><p><a class="reference external" href="http://www.gridspy.co.nz/">Gridspy</a> - live power monitoring and analysis</p></li>
+<li><p><a class="reference external" href="http://www.hellanzb.com/trac/">hellanzb</a> - an application designed for *nix environments that retrieves and processes Usenet nzb files.</p></li>
+<li><p><a class="reference external" href="http://www.fettig.net/projects/hep">Hep</a> - Message routing super-server.</p></li>
+<li><p><a class="reference external" href="http://howie.sourceforge.net/">Howie the Chatterbot</a> - a conversational AI.</p></li>
+<li><p><a class="reference external" href="http://www.travishartwell.net/blog/static/informant-index">Informant</a> - GNOME Panel applet for event notification.</p></li>
+<li><p><a class="reference external" href="http://sourceforge.net/projects/itaka/">Itaka</a> - an on-demand screen capture server</p></li>
+<li><p><a class="reference external" href="https://github.com/jookies/jasmin">Jasmin</a> - Open source SMS gateway</p></li>
+<li><p><a class="reference external" href="http://sourceforge.net/projects/khashmir">Khashmir</a> - distributed hash table.</p></li>
+<li><p><a class="reference external" href="https://launchpad.net/landscape-client">Landscape Client</a> - the Ubuntu system management agent that communicates with the Canonical Landscape management service.</p></li>
+<li><p><a class="reference external" href="https://launchpad.net/launchpad">Launchpad</a> - Cross-project collaboration for the Open Source world</p></li>
+<li><p><a class="reference external" href="http://svn.sat.qc.ca/trac/lunch">Lunch</a> - Simple process launcher for complex distributed setup</p></li>
+<li><p><a class="reference external" href="http://theendmusic.org/programming/MaxJax">MaxJax</a> - a solution for real-time web based control of any open sound control enabled sound synthesis engine.</p></li>
+<li><p><a class="reference external" href="http://sourceforge.net/projects/msngateway/">msn-gateway</a> - an msn messenger gateway for mobile phones using email and web access.</p></li>
+<li><p><a class="reference external" href="http://www.cps-project.org/sections/projects/nxlucene">NXLucene</a> - a standalone multi-threaded Lucene-based text indexing server.</p></li>
+<li><p><a class="reference external" href="http://code.stanziq.com/palaver">Palaver</a> - multi-user chat for Jabber.</p></li>
+<li><p><a class="reference external" href="http://petmail.lothar.com/">PETMail</a> - permission based anti-spam replacement for SMTP.</p></li>
+<li><p><a class="reference external" href="http://meta.wikimedia.org/wiki/CVN/Bots#pgkbot">Pgkbot</a> - a bot for monitoring mediawiki changes.</p></li>
+<li><p><a class="reference external" href="https://launchpad.net/poetry">Poetry</a> - Poetry is a collection of simple command line tools for working with XMPP services. It aims to provide a set of tools similar to tools like dig, curl, and man, but for interacting, configuring, and querying XMPP services.</p></li>
+<li><p><a class="reference external" href="http://wiki.dataflow.ws/Purity">Purity</a> - Python library for Pure Data dynamic patching to create audio patches.</p></li>
+<li><p><a class="reference external" href="https://launchpad.net/pymon">pymon</a> - pymon is an open source network and process monitoring solution implemented in Twisted. Both the user interface and the software configuration are designed to be easily and rapidly deployed, saving on time and overhead often associated with other monitoring solutions.</p></li>
+<li><p><a class="reference external" href="http://sourceforge.net/projects/pynfo/">Pynfo</a> - extendable multi-function IRC bot.</p></li>
+<li><p><a class="reference external" href="https://launchpad.net/pysms">PySMS</a> - This is a Short Message Server written in python. It provides the possibility to take Messages inserted into a Database and send them over a supported protocols (currently only UCP/EMI) to a SMS Provider.</p></li>
+<li><p><a class="reference external" href="http://pythondirector.sf.net">PythonDirector</a> - load balancing for web servers.</p></li>
+<li><p><a class="reference external" href="http://homepage.hispeed.ch/py430/python/index.html">pyvncviewer</a> - a simple VNC viewer implemented in Python.</p></li>
+<li><p><a class="reference external" href="http://www.rdbhost.com/">RdbHost</a> - !RdbHost uses Twisted for a streaming web-server.  The streaming server allows users to stream large SQL ‘dump’ files to and from the database host using a web browser.</p></li>
+<li><p><a class="reference external" href="http://svn.sat.qc.ca/trac/scenic">Scenic</a> - Telepresence software for wide bandwidth networks and oriented toward live performances</p></li>
+<li><p><a class="reference external" href="http://cvs.zope.org/Packages/SFTPGateway/">SFTPGateway</a> - SFTP to FTP gateway, allowing secure access to FTP servers.</p></li>
+<li><p><a class="reference external" href="http://divmod.org/trac/wiki/ShtoomProject">Shtoom</a> - a RTP/SIP VoIP phone.</p></li>
+<li><p><a class="reference external" href="http://solipsisarchive.netofpeers.net/">Solipsis</a> - a pure peer-to-peer system for a massively shared virtual world.</p></li>
+<li><p><a class="reference external" href="http://www.spring-alpha.org/svs/index.php?content=about">svs</a> - a framework for supporting collaborative projects that combine coding with other media.</p></li>
+<li><p><a class="reference external" href="http://allmydata.org">Tahoe-LAFS</a> - a secure, decentralized, fault-tolerant filesystem.</p></li>
+<li><p><a class="reference external" href="http://toonloop.com">Toonloop</a> - Software suite for performing with live frame by frame animation creation</p></li>
+<li><p><a class="reference external" href="http://pypi.python.org/pypi/toursst/0.0.3">TouRSSt</a> - RSS delivery system.</p></li>
+<li><p><a class="reference external" href="https://bitbucket.org/adroll/turtl/overview">Turtl</a> - HTTP proxy whose purpose is to throttle connections to specific hostnames to avoid breaking terms of usage of those API providers (like del.icio.us, technorati and so on).</p></li>
+<li><p><a class="reference external" href="https://launchpad.net/txloadbalancer">txLoadBalancer</a> - This is a fork of Anthony Baxter’s !PythonDirector. It removes all threading and asyncore code, replacing the admin UI and the remaining threading loops with the Twisted-based analogs. It also aims to provide a developer API for those who wish to provide load-balancing services from within their Twisted applications.</p></li>
+<li><p><a class="reference external" href="https://github.com/philchristensen/txOpenID">txOpenID</a> - A Twisted OpenID server. txOpenID is an implementation of the OpenID Identity Provider specification, written using Twisted Web and Divmod’s Nevow.</p></li>
+<li><p><a class="reference external" href="http://upstage.org.nz/">Upstage</a> - a “cyberperformance” chat system.</p></li>
+<li><p><a class="reference external" href="http://mithrandr.moria.org/code/">Various Libraries</a> - pcap, SNMP integration, RSS to NNTP gateway, and other programs.</p></li>
+<li><p>WinDictator - Dictate in the MS Windows OS, have the text typed in Linux via X faked keystroke events.</p></li>
+<li><p><a class="reference external" href="http://zenoss.org/">Zenoss</a> - open source network/systems monitoring and management</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="games">
+<h2>Games<a class="headerlink" href="#games" title="Permalink to this headline">#</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="http://sourceforge.net/projects/originalgamer">OGC</a> - MUD client.</p></li>
+<li><p><a class="reference external" href="http://gosiege.sourceforge.net/">Go Siege</a> - multiplayer Go game.</p></li>
+<li><p><a class="reference external" href="http://www.asbahr.com/beyond.html">Beyond 2</a> - high level framework for assembling, animating, and interacting with 3D virtual environments.</p></li>
+<li><p><a class="reference external" href="http://jupiter.bubblehouse.org/innerspace">txSpace</a> - a pseudo-MUD engine.</p></li>
+<li><p><a class="reference external" href="https://gna.org/projects/tactics">GalaxyMage</a> - a cross-platform, open-source tactical RPG with online multiplayer play.</p></li>
+<li><p><a class="reference external" href="http://sourceforge.net/projects/arrakis/">OpenRTS</a> - an open source real-time strategy game with multiplayer and scenario games.</p></li>
+<li><p><a class="reference external" href="http://pyscrabble.sourceforge.net/">PyScrabble</a> - an online, multiplayer Scrabble game.</p></li>
+<li><p><a class="reference external" href="http://freshmeat.net/projects/poker3d/">Poker3d</a> - a 3d poker game server and client.</p></li>
+<li><p><a class="reference external" href="http://freshmeat.net/projects/buyasta/">Buyasta</a> - a MUD engine.</p></li>
+<li><p><a class="reference external" href="http://pessimization.com/software/londonlaw/">London Law</a> - an online multiplayer adaptation of the classic Scotland Yard board game.</p></li>
+<li><p><a class="reference external" href="http://www.linux-games.com/castle-combat/">Castle Combat</a> - a multiplayer game designed after the arcade game “Rampart”</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="research-projects">
+<h2>Research Projects<a class="headerlink" href="#research-projects" title="Permalink to this headline">#</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="http://github.com/labrad">LabRAD</a> is an RPC system designed for use in scientific research labs, presently in use by <a class="reference external" href="https://github.com/labrad/labrad/wiki/Who-uses-LabRAD">more than a dozen academic and industrial labs</a> around the world.</p></li>
+<li><p><a class="reference external" href="http://tycoon.hpl.hp.com/">Tycoon @ HP Labs</a> is a market-based system for managing compute resources in distributed clusters.</p></li>
+<li><p><a class="reference external" href="http://dsd.lbl.gov/gtg/projects/pyGridWare/">pyGridWare @ Lawrence Berkeley National Labs</a> is a Python implementation of the WS-Resource framework. It includes support for WS-Addressing, WS-Notification, WS-Lifetime management, and WS-Security.</p></li>
+<li><p><a class="reference external" href="http://viff.dk/">VIFF @ University of Aarhus, Denmark</a> is an open source Python library for implementing secure multi-party computation.</p></li>
+<li><p>Dharma @ UPenn: Distributed Home Agent for Robust Mobile Access.</p></li>
+<li><p>PySense @ MIT is an open source python library devoted to first person sensing for robots and wearables.</p></li>
+</ul>
+</div></blockquote>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2022, TBD
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Projects Using Twisted</a><ul>
+<li><a class="reference internal" href="#community-code-project">Community Code Project</a></li>
+<li><a class="reference internal" href="#libraries-and-add-ons">Libraries and Add-Ons</a></li>
+<li><a class="reference internal" href="#applications">Applications</a></li>
+<li><a class="reference internal" href="#games">Games</a></li>
+<li><a class="reference internal" href="#research-projects">Research Projects</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/scripts/furo.js"></script>
+    </body>
+</html>

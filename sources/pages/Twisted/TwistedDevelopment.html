@@ -1,0 +1,493 @@
+<!doctype html>
+<html class="no-js">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Index" href="../../../genindex.html" /><link rel="search" title="Search" href="../../../search.html" />
+
+    <meta name="generator" content="sphinx-4.4.0, furo 2022.02.14.1"/>
+        <title>Twisted Development - Twisted Documentation documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?digest=a8f031f701c6af50c9919b48f173a5785af06fac" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?digest=25ceb02ed1c46dc30f2321ff83e92799f69dfdb9" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  body[data-theme="dark"] {
+    --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    body:not([data-theme="light"]) {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+  }
+</style></head>
+  <body>
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../../index.html"><div class="brand">Twisted Documentation  documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
+  
+  
+  <span class="sidebar-brand-text">Twisted Documentation  documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
+  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <div class="content-icon-container"><div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="twisted-development">
+<h1><a class="toc-backref" href="#id3">Twisted Development</a><a class="headerlink" href="#twisted-development" title="Permalink to this headline">#</a></h1>
+<p><a class="reference external" href="/sphinxwiki/content/pages/ContributingToTwistedLabs.html">Contribute</a> &gt; Twisted Development</p>
+<div class="contents topic" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#twisted-development" id="id3">Twisted Development</a></p>
+<ul>
+<li><p><a class="reference internal" href="#contributing" id="id4">Contributing</a></p>
+<ul>
+<li><p><a class="reference internal" href="#getting-the-source-code" id="id5">Getting the source code</a></p></li>
+<li><p><a class="reference internal" href="#creating-your-work-environment" id="id6">Creating your work environment</a></p>
+<ul>
+<li><p><a class="reference internal" href="#with-tox" id="id7">With Tox</a></p></li>
+<li><p><a class="reference internal" href="#without-tox" id="id8">Without Tox</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#submitting-a-patch" id="id9">Submitting a Patch</a></p></li>
+<li><p><a class="reference internal" href="#getting-your-patch-accepted" id="id10">Getting Your Patch Accepted</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#tools-for-development" id="id11">Tools for Development</a></p></li>
+<li><p><a class="reference internal" href="#runtime-and-development-dependencies" id="id12">Runtime and development dependencies</a></p></li>
+<li><p><a class="reference internal" href="#tickets-management" id="id13">Tickets management</a></p></li>
+<li><p><a class="reference internal" href="#policies" id="id14">Policies</a></p></li>
+<li><p><a class="reference internal" href="#wiki-pages-maintenance" id="id15">Wiki pages maintenance</a></p></li>
+<li><p><a class="reference internal" href="#win32-development" id="id16">Win32 development</a></p></li>
+<li><p><a class="reference internal" href="#twisted-maintenance" id="id17">Twisted Maintenance</a></p></li>
+</ul>
+</li>
+</ul>
+</div>
+<section id="contributing">
+<h2><a class="toc-backref" href="#id4">Contributing</a><a class="headerlink" href="#contributing" title="Permalink to this headline">#</a></h2>
+<p>Twisted uses the <a class="reference external" href="/sphinxwiki/content/pages/UltimateQualityDevelopmentSystem.html">The Ultimate Quality Development System</a>, in addition to this ReviewProcess.</p>
+<p>If you want to become a developer, it is important to understand that all your contributions (including those initial patches you send to the bug tracker) will have to be licenced under the <a class="reference external" href="https://opensource.org/licenses/mit-license.php">MIT License</a>.</p>
+<section id="getting-the-source-code">
+<h3><a class="toc-backref" href="#id5">Getting the source code</a><a class="headerlink" href="#getting-the-source-code" title="Permalink to this headline">#</a></h3>
+<p>You can get Twisted’s source code here:</p>
+<p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/twisted/twisted.git</span> <span class="pre">Twisted</span></code></p>
+<p>If you intend to contribute to Twisted via Git, but do not have write access to the Twisted repository, you should instead fork the project by going to <a class="reference external" href="https://github.com/twisted/twisted">https://github.com/twisted/twisted</a> and clicking on “fork”.
+Then set up your local repository:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git clone https://github.com/&lt;yourusername&gt;/twisted.git Twisted</span>
+<span class="go">cd Twisted</span>
+<span class="go">git remote add upstream https://github.com/twisted/twisted.git</span>
+<span class="go">git fetch upstream</span>
+<span class="go">git branch -u upstream/trunk trunk</span>
+</pre></div>
+</div>
+<p>NOTE for experienced Git users: for historical reasons, Twisted’s main branch is currently named “trunk”, instead of the usual “master”.</p>
+</section>
+<section id="creating-your-work-environment">
+<span id="creatingyourworkenvironment"></span><h3><a class="toc-backref" href="#id6">Creating your work environment</a><a class="headerlink" href="#creating-your-work-environment" title="Permalink to this headline">#</a></h3>
+<p>Twisted development does not enforce any specific work/build environment.</p>
+<p>Twisted uses Tox for managing the environment used in the continuous testing systems (GitHub Actions, Circle CI, Travis-CI, Appveyor).</p>
+<section id="with-tox">
+<h4><a class="toc-backref" href="#id7">With Tox</a><a class="headerlink" href="#with-tox" title="Permalink to this headline">#</a></h4>
+<p>You will need Tox version at least 2.4. (On Ubuntu 16.04 you have 2.3.1).</p>
+<p>See README.md and tox.ini comments for more details. Note that some environments are for CI systems and not designed for local runs.</p>
+<p>Here is an example for running the test in a specific environment:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>tox -e alldeps-nocov twisted.conch.test.test_transport
+<span class="gp">$ </span>tox -e lint,black,newsfragment,manifest-checker
+</pre></div>
+</div>
+<p>You can also use tox just to initialize the dev virtual environment and then manually active and use it:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">tox -e nodeps-nocov-posix --develop</span>
+<span class="go">. build/nodeps-nocov-posix/bin/active</span>
+<span class="go">trial twisted.conch.test.test_transport</span>
+</pre></div>
+</div>
+</section>
+<section id="without-tox">
+<h4><a class="toc-backref" href="#id8">Without Tox</a><a class="headerlink" href="#without-tox" title="Permalink to this headline">#</a></h4>
+<p>For faster runs, you can skip tox and build a custom working environment.</p>
+<p>For your convenience, the setup.py file defined optional components, <cite>dev</cite> component being one of them.</p>
+<p>Here is an example of creating an environment using virtualenv.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>Create base environment.
+<span class="go">virtualenv build/</span>
+<span class="gp"># </span>For Unix
+<span class="go">. build/bin/activate</span>
+<span class="gp"># </span>For windows <span class="o">(</span>replace .bat with .ps1 <span class="k">for</span> powershell<span class="o">)</span>
+<span class="go">build/Scripts/activate.bat</span>
+<span class="go">pip install pypiwin32</span>
+
+<span class="gp"># </span>Install dev dependencies, also forcing upgrade of existing versions.
+<span class="go">pip install -U -e '.[dev]'</span>
+<span class="gp"># </span>At least on my Ubuntu <span class="m">16</span>.06 the install_requires were not correctly installed,
+<span class="gp"># </span>so I am doing a manual install based on the content of src/twisted/python/_setup.py.
+<span class="go">pip install automat incremental constantly diff_cover</span>
+
+<span class="gp"># </span>Use the dev tools.
+<span class="gp"># </span>Prefix this with the path to python.exe on Windows
+<span class="go">trial twisted.conch.test.test_transport</span>
+
+<span class="gp"># </span>Using the coding standard guidelines validation tool... will get a lot of <span class="nb">false</span> positives
+<span class="go">twistedchecker twisted.conch.ssh.transport</span>
+<span class="gp"># </span>On Linux/OSX there is a helper to only raise error <span class="k">for</span> the diff
+<span class="go">./.travis/twistedchecker-trunk-diff.sh src/twisted/</span>
+
+<span class="gp"># </span>Static code analysis and checkers <span class="o">(</span>see tox.ini <span class="k">for</span> inspiration<span class="o">)</span>
+<span class="go">pyflakes twisted/conch/ssh/transport.py</span>
+<span class="go">git diff trunk... | admin/pycodestyle-twisted.py --diff</span>
+<span class="go">./bin/admin/check-newsfragment src/twisted/</span>
+<span class="go">check-manifest --ignore "docs/_build*,docs/historic/*,admin*,bin/admin*,twisted/topfiles/*.Old"</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="submitting-a-patch">
+<h3><a class="toc-backref" href="#id9">Submitting a Patch</a><a class="headerlink" href="#submitting-a-patch" title="Permalink to this headline">#</a></h3>
+<p>Here’s a quick step-by-step guide to getting from an idea for an improvement to Twisted to something that we can integrate.  First, I’ll explain just the mechanics of getting your code into review, not what the code itself should do.  If you actually want us to be able to use your code, you will also want to read the section below on getting your patch accepted, too!</p>
+<ol class="arabic simple">
+<li><p>For the patch you are submitting, make sure that a <a class="reference external" href="https://twistedmatrix.com/trac/report">ticket exists using the “search” field above</a>, and Google for the patch which you are submitting.</p>
+<ol class="arabic simple">
+<li><p>If you can’t find one, file a new ticket using the <a class="reference external" href="https://twistedmatrix.com/trac/newticket">new ticket</a> link above. See: <a class="reference external" href="/sphinxwiki/content/pages/Twisted/TwistedDevelopment.html#tickets-management">Tickets Management</a>.</p></li>
+</ol>
+</li>
+<li><p>Create a <a class="reference external" href="https://help.github.com/articles/fork-a-repo/">fork on GitHub</a> and clone it (see <a class="reference external" href="#getting-the-source-code">Getting the source code</a> above).</p></li>
+<li><p>Create a branch in git for your code.  If your ticket is <strong>1234</strong> and your GitHub ID is <strong>myuserid</strong>, you can create a branch like:</p></li>
+</ol>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">git checkout trunk</span>
+<span class="go">git pull</span>
+<span class="go">git checkout -b 1234-myuserid-mychange</span>
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li><p>Edit the code in the branch that you just checked out, making your awesome change to Twisted.</p></li>
+<li><p>Make sure that your patch fulfills all of the requirements of the <a class="reference external" href="/sphinxwiki/content/pages/ReviewProcess.html">ReviewProcess</a>, so you don’t need to submit your patch many repeated times. Run <code class="docutils literal notranslate"><span class="pre">tox</span> <span class="pre">-e</span> <span class="pre">black-reformat</span></code> to automate the formatting.</p></li>
+<li><p>Every patch needs a <a class="reference external" href="/sphinxwiki/content/pages/ReviewProcess.html#newsfiles">topfile news fragment</a> to tell the user what was changed</p></li>
+<li><dl class="simple">
+<dt>Commit your changes</dt><dd><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">-am</span> <span class="pre">"Changed</span> <span class="pre">some</span> <span class="pre">stuff"</span></code></p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Push your changes to GitHub</dt><dd><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">1234-myuserid-mychange</span></code></p>
+</dd>
+</dl>
+</li>
+<li><p>Create a <a class="reference external" href="https://help.github.com/articles/creating-a-pull-request/">GitHub pull request</a> for the <strong>my-new-change</strong> branch.  Make sure that in the pull request, you put a link to the ticket that you filed above.</p></li>
+<li><p>In your ticket, put a link to the GitHub pull request.</p></li>
+<li><p>Put the ticket into review.  This is accomplished by doing the following:</p>
+<ol class="arabic simple">
+<li><p>enter the word <strong>“review”</strong> into the <strong>“Keywords”</strong> field of the ticket.  (If there are other keywords already there, just add a space to separate the keyword.)</p></li>
+<li><p>Click on the “reassign to” radio button.</p></li>
+<li><p>Select the topmost, blank entry from the “reassign to” button.</p></li>
+<li><p>Optionally, add a comment explaining which patch you would like reviewed (if there are already other attached files), and explaining <strong>what</strong> your change does (as opposed to the <strong>why</strong> you want it done, which you should have put into the ticket’s summary and description).</p></li>
+<li><p>Hit “submit changes”.</p></li>
+</ol>
+</li>
+<li><p>At this point, you need to wait for feedback.  If your patch is very good, very simple, and obviously correct, we may just apply it, but it is ‘’very unlikely’’ that the first draft of a patch will be accepted as-is.  When a Twisted developer reviews your patch, they will re-assign the ticket to you; you can <a class="reference external" href="http://twistedmatrix.com/trac/report/7">see the list of tickets assigned to you by clicking here</a>. Unfortunately, the time it takes us to deal with a ticket submitted for review is highly variable, and depends on how many other tickets are waiting review, the amount of free time that the Twisted core development team has, and how many resources we have available for <a class="reference external" href="http://labs.twistedmatrix.com/">sponsored development</a>.</p></li>
+<li><p>When you do receive a review comment, push changes to your branch which address that feedback, then place the ticket back in review.</p></li>
+<li><p>When placing the ticket back for review, make sure your branch is up to date with latest trunk, and that there will be no merge conflicts.</p></li>
+<li><p>Don’t push your changes by rewriting the history, merge trunk into your branch.</p></li>
+</ol>
+</section>
+<section id="getting-your-patch-accepted">
+<h3><a class="toc-backref" href="#id10">Getting Your Patch Accepted</a><a class="headerlink" href="#getting-your-patch-accepted" title="Permalink to this headline">#</a></h3>
+<p>If you are interested in contributing to Twisted for the first time, consider working on an existing ticket rather than contributing a new feature.  Fixes for existing problems or implementations of already-requested features will generally take priority over new ideas.  Consider discussing the work you want to do with <a class="reference external" href="/sphinxwiki/content/pages/Twisted/TwistedCommunity.html">other Twisted developers first</a>.</p>
+<p>Familiarize yourself with project policies and coding standards and make sure your full contribution (code, test, documentation, design) adheres to it. See: <a class="reference external" href="#policies">Policies</a>.</p>
+<p>There are a couple of tools to help with automatic policy checks.
+Make sure there are no errors when running these tox environments (or equivalent checks):</p>
+<p><code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">tox</span> <span class="pre">-e</span> <span class="pre">lint,black,newsfragment,manifest-checker</span></code></p>
+<p>Make sure that you have written unit tests and docstrings for all code which has changed in your patch.  It works best if you use test-driven development to write your patch initially, and write your tests before your code.  (Believe me, if you write your tests after you write your code, we ‘’will’’ know.  It’s more obvious than you think.)</p>
+<p>Run the full test suite ‘’before’’ submitting your patch, and fix any problems you discover.  If a reviewer notices failing tests, they may not give your code a deep look, and you may have to wait longer for a second review. See: <a class="reference external" href="#tools-for-development">Tools for development</a>.</p>
+<p>Some users may discover that their system is unusual and Twisted’s test suite <strong>does not pass</strong> “out of the box”.  If this is the case, just make sure that the <strong>same</strong> tests are failing for you in a pristine checkout of trunk and with your changes applied.  Then, in addition to submitting your patch, please let us know about the problem with the test suite!</p>
+</section>
+</section>
+<section id="tools-for-development">
+<h2><a class="toc-backref" href="#id11">Tools for Development</a><a class="headerlink" href="#tools-for-development" title="Permalink to this headline">#</a></h2>
+<p>There are a few useful tools for developing Twisted. Some of them are included with Twisted, some are third-party dependencies.</p>
+<p>Command from this section assume that you run them from withing Twisted source code checkout root.</p>
+<p>To run the tests, simply run <cite>trial twisted</cite>. Make sure you run trial command that comes with twisted source code and not the one provided by your operating system.</p>
+<p>To generate the narrative documentation or API documentation, see <a class="reference external" href="/sphinxwiki/content/pages/ReviewingDocumentation.html">the wiki page on Twisted documentation</a>.</p>
+<p>After every commit to Twisted, the buildbot runs all the unit tests and reports <a class="reference external" href="http://buildbot.twistedmatrix.com/">test results on several platforms</a>.  Here is a page showing only the <a class="reference external" href="http://buildbot.twistedmatrix.com/boxes-supported">test results on supported platforms</a>. All tests on supported platforms always pass. Watch the buildbot. Because sometimes, the buildbot watches back.</p>
+</section>
+<section id="runtime-and-development-dependencies">
+<h2><a class="toc-backref" href="#id12">Runtime and development dependencies</a><a class="headerlink" href="#runtime-and-development-dependencies" title="Permalink to this headline">#</a></h2>
+<p>Required and optional dependencies are now documented inside the source code _EXTRAS_REQUIRE variable</p>
+<p>Some optional dependencies are not yet documented and they are presented here:</p>
+<ul class="simple">
+<li><p>pygtk (or pygi or pygobject or something) is required for the gtk class of reactors</p></li>
+<li><p>wxpython is required for wxsupport / wxreactor</p></li>
+<li><p>gadfly, sqlite, pypgsql, psycopg, mysqldb, kinterbasdb (at least one) are required for twisted.enterprise.adbapi</p></li>
+<li><p>SOAPpy is required for Twisted Web’s SOAP support</p></li>
+<li><p>pypam is required for twisted.cred PAM integration</p></li>
+</ul>
+<p>And there are some additional development tools:</p>
+<ul class="simple">
+<li><p>subunit is required for trial’s subunit output plugin</p></li>
+<li><p>cython is required to update iocpreactor and some Failure unit tests</p></li>
+</ul>
+</section>
+<section id="tickets-management">
+<h2><a class="toc-backref" href="#id13">Tickets management</a><a class="headerlink" href="#tickets-management" title="Permalink to this headline">#</a></h2>
+<p>All changes to source code require a ticket.</p>
+<p>If you file a new ticket, please start with a clear description of <strong>why</strong> such a change is desirable.
+We can read your attached code to find out <strong>what</strong> you are doing, but we can’t read your mind to figure out why you want it done!</p>
+<p>A Twisted ticket can be of one of three types.</p>
+<ul class="simple">
+<li><p><strong>Enhancements</strong> are used for feature additions.  These typically take the form of a new API or an expansion of an existing API.  Enhancement tickets should clearly describe the desired feature.  The more well specified a feature is, the more likely it is to be implemented (and importantly, the more likely it is that what is implemented will actually be what the reporter wanted!) and the easier it is to implement.  Remember that the ticket is possibly the only persistent record of the feature request.  If it is not self-contained and sufficiently detailed, then it will likely fail to communicate the reporter’s idea, diminishing its value (possibly all the way down to zero).</p></li>
+<li><p><strong>Defects</strong> are used to track bugs in existing APIs.  Defect tickets are easier to specify than enhancements.  A defect should briefly describe the problem, but the bulk of the ticket should be a runnable program (ideally in the form of a unit test) which demonstrates the bug.</p></li>
+<li><p><strong>Regressions</strong> are similar to defects, but are for bugs which are introduced into APIs in newer releases of Twisted.  Like defect tickets, regression tickets should have a runnable program attached to demonstrate the problem.</p></li>
+<li><p><strong>Release blocker: regression</strong> a ticket which blocks the release of the next Twisted version due to a regression.</p></li>
+<li><p><strong>Release blocker: wrong release notes</strong> a ticket which blocks the release of the next Twisted version due to a problem in the release notes.</p></li>
+<li><p><strong>Release blocker: release process bug</strong> a ticket which blocks the release of the next Twisted version due to a problem/issue/defect in the release process itself.</p></li>
+</ul>
+<p>A ticket can have attached the following official tags <a class="reference external" href="/sphinxwiki/content/pages/BugKeywords.html">BugKeywords</a>.</p>
+<p>There are some UsefulQueries for finding issues in the tracker.</p>
+</section>
+<section id="policies">
+<span id="id2"></span><h2><a class="toc-backref" href="#id14">Policies</a><a class="headerlink" href="#policies" title="Permalink to this headline">#</a></h2>
+<p>This series of documents is designed for people who wish to contribute to the Twisted codebase.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://twistedmatrix.com/documents/current/core/development/policy">Development policies</a></p></li>
+<li><p><a class="reference external" href="http://twistedmatrix.com/documents/current/core/development/naming.html">Naming Conventions</a></p></li>
+<li><p><a class="reference external" href="http://epydoc.sourceforge.net/epytext.html">Epytext</a> for docstrings format</p></li>
+<li><p><a class="reference external" href="http://sphinx-doc.org/rest.html">ReStructuredText and Sphinx</a> for narrative documentation.</p></li>
+<li><p><a class="reference external" href="/sphinxwiki/content/pages/Security.html">Security</a></p></li>
+<li><p><a class="reference external" href="http://twistedmatrix.com/documents/current/core/development/philosophy.html">Philosophy</a></p></li>
+<li><p><a class="reference external" href="/sphinxwiki/content/pages/ReviewProcess.html">Review Process</a></p></li>
+<li><p><a class="reference external" href="/sphinxwiki/content/pages/ContributorAdvancementPath.html">Contributor Advancement Path</a></p></li>
+</ul>
+</section>
+<section id="wiki-pages-maintenance">
+<h2><a class="toc-backref" href="#id15">Wiki pages maintenance</a><a class="headerlink" href="#wiki-pages-maintenance" title="Permalink to this headline">#</a></h2>
+<p>Changes to wiki pages don’t require a ticket.</p>
+<p>To prevent spam-bots, newly registered accounts don’t have write access for wiki pages.</p>
+<p>If you want to edit wiki pages, ask for write permission via one of <a class="reference external" href="/sphinxwiki/content/pages/Twisted/TwistedCommunity.html">community communication channel</a> . Please mention your Trac username.</p>
+</section>
+<section id="win32-development">
+<h2><a class="toc-backref" href="#id16">Win32 development</a><a class="headerlink" href="#win32-development" title="Permalink to this headline">#</a></h2>
+<p>If you want to hack Twisted on Win32, see Ying Li’s <a class="reference external" href="http://blog.ying.li/2012/03/twisted-development-on-windows-v2.html">short tutorial on setting up a Twisted win32 development environment</a>; but note that it describes getting the code with Subversion and you will currently need to use Git.</p>
+</section>
+<section id="twisted-maintenance">
+<h2><a class="toc-backref" href="#id17">Twisted Maintenance</a><a class="headerlink" href="#twisted-maintenance" title="Permalink to this headline">#</a></h2>
+<p>You might be interested in learning about tasks related to maintaining this website? or for <a class="reference external" href="http://twisted.readthedocs.org/en/latest/core/development/policy/release-process.html">releasing Twisted</a>.</p>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2022, TBD
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Twisted Development</a><ul>
+<li><a class="reference internal" href="#contributing">Contributing</a><ul>
+<li><a class="reference internal" href="#getting-the-source-code">Getting the source code</a></li>
+<li><a class="reference internal" href="#creating-your-work-environment">Creating your work environment</a><ul>
+<li><a class="reference internal" href="#with-tox">With Tox</a></li>
+<li><a class="reference internal" href="#without-tox">Without Tox</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#submitting-a-patch">Submitting a Patch</a></li>
+<li><a class="reference internal" href="#getting-your-patch-accepted">Getting Your Patch Accepted</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#tools-for-development">Tools for Development</a></li>
+<li><a class="reference internal" href="#runtime-and-development-dependencies">Runtime and development dependencies</a></li>
+<li><a class="reference internal" href="#tickets-management">Tickets management</a></li>
+<li><a class="reference internal" href="#policies">Policies</a></li>
+<li><a class="reference internal" href="#wiki-pages-maintenance">Wiki pages maintenance</a></li>
+<li><a class="reference internal" href="#win32-development">Win32 development</a></li>
+<li><a class="reference internal" href="#twisted-maintenance">Twisted Maintenance</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/scripts/furo.js"></script>
+    </body>
+</html>
